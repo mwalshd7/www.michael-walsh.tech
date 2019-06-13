@@ -1,0 +1,122 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] </title>
+
+    <environment include="Development">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+    </environment>
+    <environment exclude="Development">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
+              crossorigin="anonymous"
+              integrity="sha256-eSi1q2PG6J7g7ib17yAaWMcrr5GrtohYChqibrV7PBE="/>
+    </environment>
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    @Html.Raw(JavaScriptSnippet.FullScript)
+</head>
+<body>
+    <div class="container fluid" id="gotoTop">
+        <!-- NAVBAR Start -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent border-0">
+            <a class="navbar-brand" href="https://www.michael-walsh.tech/">
+                <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 480 480" enable-background="new 0 0 60 60" xml:space="preserve" style="width:60px; height:60px; float: left;">
+                    <font horiz-adv-x="1000">
+                        <!-- Copyright 1992, 1994, 1997, 2000, 2004 Adobe Systems Incorporated. All rights reserved. Myriad is either a registered trademark or a trademark of Adobe Systems Incorporated in the United States and/or other countries. -->
+                        <font-face font-family="Yu Gothic UI Light" units-per-em="1000" underline-position="-100" underline-thickness="50"></font-face>
+                        <missing-glyph horiz-adv-x="500" d="M0,0l500,0l0,700l-500,0M250,395l-170,255l340,0M280,350l170,255l0,-510M80,50l170,255l170,-255M50,605l170,-255l-170,-255z"></missing-glyph>
+                        <glyph unicode="M" horiz-adv-x="804" d="M661,0l85,0l-42,674l-111,0l-120,-326C443,263 419,189 402,121l-3,0C382,191 359,265 331,348l-115,326l-111,0l-47,-674l83,0l18,289C165,390 170,503 172,587l2,0C193,507 220,420 252,325l109,-321l66,0l119,327C580,424 608,508 631,587l3,0C633,503 639,390 644,296z"></glyph>
+                        <glyph unicode="W" horiz-adv-x="846" d="M277,0l96,351C398,438 413,504 425,571l2,0C436,503 450,437 471,351l85,-351l91,0l191,674l-89,0l-89,-340C639,250 620,175 606,101l-2,0C594,172 576,252 557,332l-82,342l-91,0l-90,-340C271,247 250,167 239,100l-2,0C225,165 207,249 187,333l-80,341l-92,0l171,-674z"></glyph>
+                    </font>
+                    <g>
+                        <rect x="6" y="6" fill="#FFFFFF" width="468" height="468"></rect>
+                        <path d="M468,12v456H12V12H468 M480,0H0v480h480V0L480,0z"></path>
+                    </g>
+                    <text transform="matrix(0.952 0 0 1 263 423.1826)" font-family="&#39;Yu Gothic UI Light&#39;" font-size="110.1332px">MW</text>
+                </svg>
+                <p id="mw" title="R == Richard :)">Michael R Walsh</p>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav3" aria-controls="navbarNav3" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span></button>
+
+            <div class="collapse navbar-collapse" id="navbarNav3">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" title="Home" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" title="Curriculum Vitae" asp-area="" asp-controller="Home" asp-action="Cv">Curriculum Vitae</a>
+                    </li>
+                    <li class="nav-item dropdown" href="#">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Social" href="#">Social Media</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink"href="#" >
+                            <a class="dropdown-item" href="https://www.linkedin.com/in/michael-walsh-8775459/"><i class="fab fa-linkedin" title="LinkedIn" aria-hidden="true"></i></a>
+                            <a class="dropdown-item" href="https://michaelrwalsh2017.wordpress.com/"><i class="fab fa-wordpress" title="WordPress" aria-hidden="true"></i></a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" href="#">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Software" href="#">Software</a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink" href="#">
+                            <a class="dropdown-item" href="https://github.com/mwalshd7"><i class="fab fa-github" title="GitHub" aria-hidden="true"></i></a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Examples"><i class="fas fa-briefcase" title="Project Examples" aria-hidden="true"></i></a>
+                        </div>
+                    </li>
+                    <li class="nav-item dropdown" href="#">
+                        <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" title="Contact" href="#">Get in Touch</a>
+                        <div class="dropdown-menu no-show" aria-labelledby="navbarDropdownMenuLink" href="#">
+                            <a class="dropdown-item" href="mailto:%20michaelrwalsh@yahoo.ie?Subject=I%20visited%20your%20website%20and%20liked%20it"><i class="far fa-envelope" title="Email" aria-hidden="true"></i></a>
+                            <a class="dropdown-item" href="skype:michaelrwalsh@yahoo.ie?call"><i class="fab fa-skype" title="Skype" aria-hidden="true"></i></a>
+                            <a class="dropdown-item" asp-area="" asp-controller="Home" asp-action="Contact" ><i class="far fa-comment" title="Comments" aria-hidden="true"></i></a>
+                            
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <div class="container">
+        <partial name="_CookieConsentPartial" />
+        <main role="main" class="pb-3">
+            @RenderBody()
+        </main>
+    </div>
+
+    <footer class="text-muted">
+     
+    <footer>
+        <div class="text-center center-block">
+            <p title="Yes i did design this.."><a asp-area="" asp-controller="Home" asp-action="SiteInfo">MW Design 2019 </a></p>
+            <a title="Up" class="sliding-link footer-chevron" href="#gotoTop"><i class="fas fa-angle-up fa-3x"></i></a>
+        </div>
+    </footer>
+    <!-- Footer Finish -->
+    
+
+    <environment include="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.js"></script>
+    </environment>
+    <environment exclude="Development">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha256-E/V4cWE4qvAeO5MOhjtGtqDzPndRO1LBk8lJ/PR7CA4=">
+        </script>
+    </environment>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+
+    @RenderSection("Scripts", required: false)
+</body>
+</html>

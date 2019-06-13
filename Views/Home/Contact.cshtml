@@ -1,0 +1,38 @@
+@{
+    ViewData["Title"] = "Contact Page";
+}
+
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+@model myApp2.Models.ContactFormModel
+
+<div id="contact_jumbo" style="padding-top: 100px; padding-bottom:100px;">
+    <div class = "jumbotron" >
+        <section class="fdb-block" data-block-type="features" data-id="4" draggable="true">
+                <div class="container" id="gotoTop">
+                    <h3>Contact Form</h3>
+                    <form asp-action="Index" asp-controller="Home" method="post">
+                        <div>
+                            <label style="padding-right: 23px;" asp-for="Name">Please enter your name:</label>
+                            <input type="text" asp-for="Name" />
+                            <p style="color:red;font-size:12px"><span asp-validation-for="Name"></span></p>
+</div>
+                        <div>
+                            <label style="padding-right: 25px;" asp-for="Email">Please enter your email:</label>
+                            <input type="text" asp-for="Email" />
+                            <p style="color:red; font-size:12px;" ><span asp-validation-for="Email"></span></p>
+                        </div>
+                        <div>
+                            <label style="padding-right: 2px;" asp-for="Message">Please enter your message:</label>
+                            <textarea asp-for="Message"></textarea>
+                            <p style="color:red; font-size:12px"><span asp-validation-for="Message"></span></p>
+                        </div>
+                            <div>
+                                <label style="padding-right: 18px"; asp-for="Phone">Optional: Phone number</label>
+                                <input type="text" asp-for="Phone" />
+                            </div>
+                            <input type="submit" value="Send Message!" />
+                    </form>
+                </div>
+        </section>
+    </div>
+</div>
