@@ -18,6 +18,7 @@ Some apsects of the old site I wanted to change....
 
 ## Getting Started
 www.michael-walsh.tech
+website.grader.com 82%
 
 ### Prerequisites
 
