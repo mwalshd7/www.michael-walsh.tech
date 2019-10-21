@@ -5,7 +5,7 @@ namespace myApp2.Models
         
         public class EmailMessage
         {
-        // Auto-implemented properties + instantiated )C#6+) ( <List>
+        // Auto-implemented properties + instantiated) ( <List>
             public List<EmailAddress> ToAddresses { get; set; } = new List<EmailAddress>();
             public List<EmailAddress> FromAddresses { get; set; } = new List<EmailAddress>();
 
