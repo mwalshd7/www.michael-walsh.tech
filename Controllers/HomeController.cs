@@ -47,7 +47,7 @@ namespace myApp2.Controllers
         }
 
         /*Setup and Send Email */
-        private EmailAddress FromAndToEmailAddress;
+        private readonly EmailAddress FromAndToEmailAddress;
         private IEmailService EmailService;
 
         public HomeController(EmailAddress _fromAddress,
