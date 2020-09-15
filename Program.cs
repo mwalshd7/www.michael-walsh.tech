@@ -18,10 +18,8 @@ namespace myApp2
         }
 
         public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
-#pragma warning disable CS0618 // Type or member is obsolete
             WebHost.CreateDefaultBuilder(args)
                 .UseApplicationInsights()
-#pragma warning restore CS0618 // Type or member is obsolete
                 .UseStartup<Startup>();
     }
 }
